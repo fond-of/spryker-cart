@@ -6,3 +6,16 @@
 ```
 composer require fond-of-spryker/cart
 ```
+
+New plugin which count total cart items. Just set in in your dependency provider, stored under:
+Pyz\Client\Cart;
+
+```
+/**
+ * @return \Spryker\Client\Cart\Dependency\Plugin\ItemCountPluginInterface
+ */
+protected function getItemCountPlugin()
+{
+    return new ItemCountPlugin();
+}
+```

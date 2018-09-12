@@ -1,8 +1,7 @@
 <?php
 
-namespace Pyz\Client\Cart\Plugin;
+namespace FondOfSpryker\Client\Cart\Plugin;
 
-use Generated\Shared\Transfer\ItemTransfer;
 use Generated\Shared\Transfer\QuoteTransfer;
 use Spryker\Client\Cart\Plugin\ItemCountPlugin as SprykerItemCountPlugin;
 
@@ -17,7 +16,7 @@ class ItemCountPlugin extends SprykerItemCountPlugin
     {
         $quantity = 0;
 
-        /** @var ItemTransfer $item */
+        /** @var \Generated\Shared\Transfer\ItemTransfer $item */
         foreach ($quoteTransfer->getItems() as $item) {
             $quantity += $item->getQuantity();
         }
